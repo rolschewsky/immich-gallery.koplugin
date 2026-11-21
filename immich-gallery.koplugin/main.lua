@@ -387,13 +387,17 @@ function Gallery:usedAsScreensaver()
         and G_reader_settings:readSetting("screensaver_dir") == self.dir
 end
 
+--- Ohne Meldung: KOReaders Vorgabe „Sleeping“ stünde sonst mitten auf dem Foto. Gleich speichern,
+--- sonst gilt die Einstellung nur bis zum nächsten Absturz.
 function Gallery:setScreensaver(on)
     if on then
         G_reader_settings:saveSetting("screensaver_type", "random_image")
         G_reader_settings:saveSetting("screensaver_dir", self.dir)
+        G_reader_settings:makeFalse("screensaver_show_message")
     elseif self:usedAsScreensaver() then
         G_reader_settings:saveSetting("screensaver_type", "disable")
     end
+    G_reader_settings:flush()
 end
 
 -- Selbst-Update ----------------------------------------------------------------------------------

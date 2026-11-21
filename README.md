@@ -11,7 +11,8 @@ full screen and changes it every few seconds. A tap brings you back to KOReader.
   on. Removed photos disappear with the next complete sync.
 - **Its own settings page.** Share URL, password, extra headers for a reverse proxy, connection
   test, sync interval, idle time and picture intervals, without editing files.
-- **Screensaver.** Optionally the same photos appear when the device goes to sleep.
+- **Screensaver.** Optionally the same photos appear when the device goes to sleep, without
+  KOReader's "Sleeping" message on top.
 - **15 languages.** English, German, French, Spanish, Italian, Portuguese, Polish, Romanian, Dutch,
   Greek, Simplified Chinese, Japanese, Hindi, Bengali and Indonesian. The plugin follows
   KOReader's language setting and falls back to English.
